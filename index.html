@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/fontawesome.css">
+    <title>Document</title>
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
+</head>
+
+<body>
+    <div id="map"></div>
+    <div class="search-menu d-flex justify-content-between">
+        <button class="btn" onclick="openSidebar()">
+            <i class="fa-solid fa-bars"></i>
+        </button>
+        <input type="text" class="form-control-lg search-textbox" placeholder="Search">
+        <button class="btn search-btn" onclick="toggleSearchResults(this)">
+            <i class="fa-solid fa-lg fa-search"></i>
+        </button>
+    </div>
+
+    <div class="search-results">
+
+    </div>
+    <div class="sidebar">
+        <div class="header">
+            <div class="d-flex justify-content-between">
+                <h4 class="text-primary">Disability App</h4>
+                <button class="btn text-primary" onclick="closeSidebar()">
+                    <i class="fa-solid fa-times fa-lg"></i>
+                </button>
+            </div>
+        </div>
+        <hr>
+    </div>
+
+    <div id="location-button">
+        <i class="fa-solid fa-location-crosshairs fa-xl"></i>
+    </div>
+
+    <script src="./googlemap.js"></script>
+    <script async
+        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAtkWs2ax-2NpZg6fjrG8mJ_M_eUM_f1Q0&callback=initMap">
+        </script>
+    <script>
+
+        const openSidebar = () => {
+            document.querySelector(".sidebar").classList.add("open-sidebar");
+            document.getElementById("map").classList.add("dimmed");
+        };
+        const closeSidebar = () => {
+            document.querySelector(".sidebar").classList.remove("open-sidebar");
+            document.getElementById("map").classList.remove("dimmed");
+        };
+
+        const toggleSearchResults = (x) => {
+            document.querySelector(".search-results").classList.toggle("show-search-results");
+            x.querySelector(".fa-solid").classList.toggle("fa-times")
+            console.log(x.classList);
+        };
+
+        
+
+    </script>
+</body>
+
+</html>
