@@ -6,13 +6,13 @@ let map, infoWindow;
 
 function initMap() {
     map = new google.maps.Map(document.getElementById("map"), {
-        center: { lat: 53.725644, lng: -0.459872 },
+        center: { lat: 53.7731, lng: -0.371 }, //university of hull cordinates
         zoom: 15,
         mapTypeControl: false,
         streetViewControl: false,
         fullscreenControl: false,
         zoomControl: false,
-      
+
     });
     infoWindow = new google.maps.InfoWindow();
 

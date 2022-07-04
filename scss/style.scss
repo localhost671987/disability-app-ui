@@ -103,3 +103,23 @@
     justify-content: center;
     color: white;
 }
+
+.navbar-menu-items{
+    padding-inline-start:  10px !important;
+
+    li{
+        padding: 20px 0;
+        font-size: large;
+    }
+
+    i{
+        width: 30px !important;
+    }
+
+    li:hover{
+        cursor: pointer;
+        color: #198754;
+    }
+}
+
+

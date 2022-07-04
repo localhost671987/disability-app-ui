@@ -10199,4 +10199,19 @@ textarea.form-control-lg {
   color: white;
 }
 
+.navbar-menu-items {
+  padding-inline-start: 10px !important;
+}
+.navbar-menu-items li {
+  padding: 20px 0;
+  font-size: large;
+}
+.navbar-menu-items i {
+  width: 30px !important;
+}
+.navbar-menu-items li:hover {
+  cursor: pointer;
+  color: #198754;
+}
+
 /*# sourceMappingURL=style.css.map */
