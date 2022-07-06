@@ -10121,7 +10121,6 @@ textarea.form-control-lg {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 5px 20px;
   border-bottom: 1px solid grey;
 }
 .topnav .logo {
@@ -10135,23 +10134,35 @@ textarea.form-control-lg {
   background-color: white;
   margin: 0.7rem;
   padding: 0.2rem;
-  border: 1px solid #888888;
   border-radius: 10px;
   z-index: 1;
   width: 30rem;
 }
 .topnav .search-menu .search-textbox {
   border: none;
-  width: 80%;
+  width: 100%;
 }
-.topnav .search-menu .search-textbox:focus, .topnav .search-menu .btn:focus {
+.topnav .search-menu .search-textbox:focus,
+.topnav .search-menu .btn:focus {
   outline: none;
   box-shadow: none;
 }
+.topnav .search-menu .btn {
+  border-radius: 0;
+  border-left: 1px solid;
+}
+@media screen and (max-width: 767px) {
+  .topnav .search-menu {
+    width: auto;
+  }
+}
 .topnav .topnav-option {
-  margin-left: 30px;
+  margin-left: 10px;
   text-align: center;
   line-height: 20px;
+}
+.topnav .topnav-option div {
+  font-weight: 500;
 }
 
 .search-results {
@@ -10164,14 +10175,35 @@ textarea.form-control-lg {
   height: calc(100vh - 70px);
   width: 0rem;
   transition: 0.2s;
+  overflow-y: scroll;
 }
 .search-results .search-result-img {
   width: 100%;
+  height: 20vh;
+  border-radius: 1rem;
+  object-fit: cover;
+}
+.search-results .title {
+  margin-top: 10px;
+  font-weight: bold;
+  font-size: 2rem;
+  margin-bottom: 5px;
+}
+.search-results .accessibility-features .images img {
+  width: 100%;
+  height: 400px;
+  object-fit: cover;
+  border-radius: 1rem;
 }
 
 .show-search-results {
   display: block;
   width: 40rem;
+}
+@media screen and (max-width: 767px) {
+  .show-search-results {
+    width: 100%;
+  }
 }
 
 .sidebar {
@@ -10213,9 +10245,8 @@ textarea.form-control-lg {
   outline: none;
   cursor: pointer;
   border-radius: 50%;
-  width: 3rem;
-  height: 3rem;
-  background-color: #198754;
+  width: 4rem;
+  height: 4rem;
   display: flex;
   align-items: center;
   justify-content: center;
