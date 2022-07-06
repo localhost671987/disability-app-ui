@@ -12,7 +12,7 @@ $gray-900: #212529;
 $black: #000;
 
 //colors
-$blue: #0d6efd;
+$blue: #0071bc;
 $indigo: #6610f2;
 $purple: #6f42c1;
 $pink: #d63384;
@@ -24,8 +24,8 @@ $teal: #20c997;
 $cyan: #0dcaf0;
 
 //primary colors
-$primary: $green;
-$secondary: $orange;
+$primary: $blue;
+$secondary: $green;
 
 //import bootstrap 5
 @import "../node_modules/bootstrap/scss/bootstrap.scss";

@@ -13,42 +13,79 @@
     filter: brightness(0.5);
 }
 
-.search-menu {
-    position: absolute;
-    background-color: white;
-    margin: 0.7rem;
-    padding: 0.2rem;
-    box-shadow: 0 5px 8px #888888;
-    z-index: 1;
-    width: 22rem;
-    .search-textbox {
-        border: none;
-        width: 80%;
+.topnav {
+    // background-color: white;
+    height: 70px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 5px 20px;
+    border-bottom: 1px solid grey;
+
+    .logo {
+        font-size: 20px;
+        color: var(--primary);
+        font-weight: 700;
+        line-height: 20px;
+        margin-right: 20px;
+        // background: linear-gradient(to right, #56ab2f  0%, #a8e063 100%);
+        // -webkit-background-clip: text;
+        // -webkit-text-fill-color: transparent;
     }
 
-    .search-textbox:focus {
-        outline: none;
+    .search-menu {
+        // position: absolute;
+        background-color: white;
+        margin: 0.7rem;
+        padding: 0.2rem;
+        border: 1px solid #888888;
+        border-radius: 10px;
+        // box-shadow: 0 5px 5px #888888;
+        z-index: 1;
+        width: 30rem;
+        // height: 40px;
+
+        .search-textbox {
+            border: none;
+            width: 80%;
+        }
+
+        .search-textbox:focus,.btn:focus {
+            outline: none;
+            box-shadow: none;
+        }
+
     }
 
-    .btn:focus{
-       box-shadow: none;
+    .topnav-option{
+        margin-left: 30px;
+        text-align: center;
+        line-height: 20px;
     }
+
+
 }
+
 
 .search-results {
     display: none;
     position: absolute;
     background-color: white;
-    // margin: 0.7rem;
-    padding: 0.3rem;
+    padding: 1rem 1.5rem;
     box-shadow: 0 5px 8px #888888;
     z-index: 0;
-    height: 100%;
-    width: 23.5rem;
+    height:  calc(100vh - 70px);
+    width: 0rem;
+    transition: 0.2s;
+
+    .search-result-img {
+        width: 100%;
+    }
 }
 
 .show-search-results {
     display: block;
+    width: 40rem;
 }
 
 .sidebar {
@@ -68,8 +105,8 @@
         display: none;
     }
 
-    .btn:focus{
-         box-shadow: none;
+    .btn:focus {
+        box-shadow: none;
     }
 
 }
@@ -83,7 +120,7 @@
     }
 }
 
-#location-button{
+#location-button {
     position: absolute;
     bottom: 2rem;
     right: 2rem;
@@ -104,22 +141,20 @@
     color: white;
 }
 
-.navbar-menu-items{
-    padding-inline-start:  10px !important;
+.navbar-menu-items {
+    padding-inline-start: 10px !important;
 
-    li{
+    li {
         padding: 20px 0;
         font-size: large;
     }
 
-    i{
+    i {
         width: 30px !important;
     }
 
-    li:hover{
+    li:hover {
         cursor: pointer;
         color: #198754;
     }
 }
-
-
